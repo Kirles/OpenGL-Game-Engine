@@ -3,15 +3,19 @@
 
 #include <iostream>
 
+/*For NVIDIA*/
+extern "C" { _declspec(dllexport) unsigned long NvOptimusEnablement = 0x00000001; }
+
+/*For AMD*/
+//extern "C" { _declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1; }
+
 int g_windowSizeX = 640;
 int g_windowSizeY = 480;
 
 void glfwWindowSizeCallback(GLFWwindow* pWindow, int width, int height) {
-
     g_windowSizeX = width;
     g_windowSizeY = height;
     glViewport(0, 0, g_windowSizeX, g_windowSizeY);
-
 }
 
 void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int mode) {
