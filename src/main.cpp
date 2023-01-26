@@ -51,7 +51,6 @@ int main(int argc, char** argv) {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* pWindow = glfwCreateWindow(g_windowSizeX, g_windowSizeY, "TankBattle", nullptr, nullptr);
-
     if (!pWindow) {
         std::cout << "glfwCreateWindow failed!" << std::endl;
         glfwTerminate();
@@ -79,6 +78,8 @@ int main(int argc, char** argv) {
             std::cerr << "Can`t create shader program: DefaultShader" << std::endl;
             return -1;
         }
+
+        resourceManager.loadTexture("DefaultTexture", "res/textures/map_16x16.png");
 
         GLuint points_vbo = 0;
         glGenBuffers(1, &points_vbo);
