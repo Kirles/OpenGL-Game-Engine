@@ -15,9 +15,9 @@ extern "C" { _declspec(dllexport) unsigned long NvOptimusEnablement = 0x00000001
 //extern "C" { _declspec(dllexport) int AmdPowerXpressRequestHighPerformance = 1; }
 
 GLfloat point[] = {
-     0.0f, 0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-     -0.5f, -0.5f, 0.0f,
+    0.0f,  0.5f, 0.0f,
+    0.5f, -0.5f, 0.0f,
+   -0.5f, -0.5f, 0.0f,
 };
 
 GLfloat colors[] = {

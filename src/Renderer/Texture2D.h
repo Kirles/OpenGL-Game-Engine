@@ -21,6 +21,7 @@ namespace Renderer {
 		~Texture2D();
 
 		void bind() const;
+
 	private:
 		GLuint m_ID;
 		GLenum m_mode;
