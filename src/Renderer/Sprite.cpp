@@ -12,8 +12,7 @@ namespace Renderer {
 					const std::shared_ptr<ShaderProgram> pShaderProgram,
 					const glm::vec2& position,
 					const glm::vec2& size,
-					const float rotation)
-					:
+					const float rotation):
 					m_pTexture(std::move(pTexture)),
 					m_pShaderProgram(std::move(pShaderProgram)),
 					m_position(position),

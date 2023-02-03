@@ -104,7 +104,7 @@ std::shared_ptr<Renderer::Sprite> ResourceManager::loadSprite(const std::string&
 		std::cerr << "Can`t find the shader: " << shaderName << "for the sprite: " << spriteName << std::endl;
 	}
 
-	std::shared_ptr<Renderer::Sprite> newSprite = m_sprites.emplace(textureName, subTextureName, std::make_shared < Renderer::Sprite>(pTexture, pShader, glm::vec2(0.f, 0.f), glm::vec2(spriteWidth, spriteHeight))).first->second;
+	std::shared_ptr<Renderer::Sprite> newSprite = m_sprites.emplace(textureName, std::make_shared < Renderer::Sprite>(pTexture, subTextureName, pShader, glm::vec2(0.f, 0.f), glm::vec2(spriteWidth, spriteHeight))).first->second;
 	return newSprite;
 }
 
